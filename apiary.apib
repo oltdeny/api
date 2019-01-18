@@ -1,0 +1,156 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# BmBox Api Documentation
+
+Это документация для API проекта BmBox
+
+##Разрешенные запросы к API:
+
+GET: Get a resource or list of resources
+
+
+## Selections [/selections/{number}]
+
+Требуется пагинация(для реализации бесконечного скрола)
+Соответственно, параметры: номер текущей страницы
+
+### Selections [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "url": "https://cupok.tech/bmbox/img/collections/cards-item-img1.jpg",
+                "title": "заголовок1",
+                "description": "описание1",
+                "date": "21.09.18",
+                "count": 25,
+                "companies": [
+                    {
+                        "id": 1
+                    },
+                    {
+                        "id": 2
+                    }
+                ]
+            },
+        ]
+        
+
+## BestSelections [/best_selections]
+
+Массив айдишников лучших подборок
+
+### BestSelections [GET]
+
++ Response 200 (application/json)
+
+        [
+            1,
+            2,
+            3
+        ]
+
+## Companies [/companies/]
+
+### Сompanies [GET]
+
+Возвращает список компаний, включающий в себя информацию об особенностях компании.
+У компании, не входящей в топ, значение атрибута rank может быть нулевым.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "rank": 1,
+                "title": "",
+                "description": "",
+                "text": "",
+                "img" : "",
+                "video": "",
+                "order": "",
+                "features": [
+                    {
+                        "icon": "",
+                        "title": "",
+                        "description": "",
+                    },
+                ]
+            },
+        ]
+        
+## TopCompanies [/top_companies/]
+
+### TopСompanies [GET]
+
+Возвращает список айдишников компаний, вошедших в топ.
+
++ Response 200 (application/json)
+
+        [
+            1, 
+            4, 
+            5
+        ]
+        
+## Categories [/categories/]
+
+### Categories [GET]
+
+Возвращает список категорий, включающий в себя информацию об компаниях.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "title": "",
+                "description": "",
+                "icon": "",
+                "order": "",
+                "companies": [
+                    1, 
+                    2,
+                    3
+                ]
+            },
+        ]
+        
+## Articles [/articles/]
+
+### Articles [GET]
+
+Возвращает список статей.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "name": "",
+                "author": "",
+                "text": "",
+                "counter": "",
+                "data": "",
+                "media": []
+            },
+        ]
+        
+## faq [/faq/]
+
+### faq [GET]
+
+Возвращает список вопросов.
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": 1,
+                "question": "",
+                "answer": ""
+            },
+        ]
