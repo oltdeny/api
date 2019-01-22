@@ -65,21 +65,49 @@ GET: Get a resource or list of resources
         [
             {
                 "id": 1,
-                "rank": 1,
-                "title": "",
-                "description": "",
-                "text": "",
-                "img" : "",
-                "video": "",
-                "order": "",
+                "rank": {"rank": 1},
+                "title": "sdasds",
+                "description": "ffsdf",
+                "text": "sdasd",
+                "img" : "sadsd",
+                "video": "asdasf",
+                "order": 1,
                 "features": [
                     {
-                        "icon": "",
-                        "title": "",
-                        "description": "",
-                    },
+                        "id": 1
+                    }
                 ]
             },
+            {
+                "id": 2,
+                "rank": {"rank": 2},
+                "title": "ffwf",
+                "description": "wefew",
+                "text": "wefwef",
+                "img" : "wefwef",
+                "video": "wefwef",
+                "order": "wefwef",
+                "features": [
+                    {
+                        "id": 1
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "rank": null,
+                "title": "werwrwe",
+                "description": "rerwerewr",
+                "text": "wrwer",
+                "img" : "werwer",
+                "video": "ewrwer",
+                "order": "rwerwe",
+                "features": [
+                    {
+                        "id": 1
+                    }
+                ]
+            }
         ]
         
 ## TopCompanies [/top_companies/]
@@ -92,8 +120,7 @@ GET: Get a resource or list of resources
 
         [
             1, 
-            4, 
-            5
+            2
         ]
         
 ## Categories [/categories/]
@@ -107,16 +134,23 @@ GET: Get a resource or list of resources
         [
             {
                 "id": 1,
-                "title": "",
-                "description": "",
-                "icon": "",
-                "order": "",
+                "title": "dwewerw",
+                "description": "wrwrw",
+                "icon": "ewrewrwe",
+                "order": "werwerwer",
                 "companies": [
                     1, 
-                    2,
                     3
                 ]
             },
+            {
+                "id": 2,
+                "title": "ewrwer",
+                "description": "werwer",
+                "icon": "werwer",
+                "order": "werwer",
+                "companies": []
+            }
         ]
         
 ## Articles [/articles]
