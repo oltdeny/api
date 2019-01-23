@@ -10,7 +10,7 @@ HOST: http://polls.apiblueprint.org/
 GET: Get a resource or list of resources
 
 
-## Selections [/selections/{number}]
+## Selections [/selections]
 
 Требуется пагинация(для реализации бесконечного скрола)
 Соответственно, параметры: номер текущей страницы
@@ -30,12 +30,38 @@ GET: Get a resource or list of resources
                 "companies": [
                     {
                         "id": 1
-                    },
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "url": "https://cupok.tech/bmbox/img/collections/cards-item-img1.jpg",
+                "title": "заголовок2",
+                "description": "описание2",
+                "date": "21.09.18",
+                "count": 25,
+                "companies": [
                     {
                         "id": 2
                     }
                 ]
             },
+            {
+                "id": 3,
+                "url": "https://cupok.tech/bmbox/img/collections/cards-item-img1.jpg",
+                "title": "заголовок3",
+                "description": "описание3",
+                "date": "21.09.18",
+                "count": 25,
+                "companies": [
+                    {
+                        "id": 1
+                    },
+                    {
+                        "id": 3
+                    }
+                ]
+            }
         ]
         
 
@@ -139,8 +165,12 @@ GET: Get a resource or list of resources
                 "icon": "ewrewrwe",
                 "order": "werwerwer",
                 "companies": [
-                    1, 
-                    3
+                    {
+                        "id": 1
+                    },
+                    {
+                        "id": 3
+                    }
                 ]
             },
             {
